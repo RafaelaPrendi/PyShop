@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PyShop</title>
+</head>
+<body>
+{% include "baze.html" %}
+<div class="site-wrapper">
+    <div class="site-wrapper-inner">
+        <div class="container">
+
+            <div class="masthead clearfix">
+                <div class="container inner row">
+                    <h3 class="masthead-brand col">PyShop</h3>
+                    <div class="col-6">
+                        <nav class="navbar navbar-expand-lg">
+                            <ul class="navbar-nav masthead-nav">
+                                <li class="active nav-item"><a href="#">Home</a></li>
+                                <li><a class="nav-item " href="#">Login</a></li>
+                                <li><a class="nav-item" href="#">Register</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="inner cover">
+                <h1 class="cover-heading">Shumëllojshmëri produktesh në shtëpinë tuaj </h1>
+                <p class="lead">PyShop është një sistem online i katalogimit të produkteve. PyShop ju ofron mundësinë që
+                    të kërkoni produktin dhe dyqanet ku ndodhet ose të shikoni inventarin e një dyqani. Rregjistrohuni
+                    për mundësinë e blerjes online.</p>
+                <p class="lead">
+                    <a class="btn btn-lg btn-default mainbtn" href="#">Kërko produkt</a>
+                    <a class="btn btn-lg btn-default mainbtn" href="#">Kërko dyqan</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <hr>
+    <div class="img">
+        <img alt="My image" src="{% static 'app/images/shopping.jpg' %}">
+    </div>
+    <hr>
+</div>
+<div class="container foot">
+    <footer>
+        <p>Copyright @ Rafaela Prendi</p>
+        <a href="https://github.com/RafaelaPrendi" id="github"> GitHub Profile </a>
+    </footer>
+</div>
+</body>
+</html>
