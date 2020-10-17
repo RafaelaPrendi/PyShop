@@ -1,0 +1,58 @@
+{% extends "baze.html" %}
+{% block emri_i_faqes %}
+<style>
+.produkt{
+    color: black;
+    }
+    .bar{
+        background-color: #1f1f2e;
+        width: 100%
+    }
+    .main{
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+    .tbl{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+</style>
+{% include "navbar.html" %}
+<div class="container-fluid mt-5 produkt">
+
+     <h2>{{ titulli_i_faqes }}</h2>
+    {% endblock %}
+    {% block permbajtja %}
+    <div class="row">
+        <div class="container main">
+            <h5>{{ dyqan }}</h5>
+            <h6> {{ titulli_i_faqes }}</h6>
+            <h6>Vlera totale e te gjithe produkteve: {{ totali }} ALL</h6>
+        </div>
+    </div>
+    <div class="row tbl">
+    <table class="table table-dark">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">Kategoria</th>
+          <th scope="col"> Cmimi Total per Kategori </th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for key, value in kategoriTotal.items %}
+      <tr>
+          <td>{{ key }}</td>
+          <td>{{ value }} ALL</td>
+        </tr>
+    {% endfor %}
+      </tbody>
+    </table>
+    </div>
+
+    {% endblock %}
+</div>
+    {% block footer %}
+{% include "footer.html" %}
+  {% endblock %}
+
+

@@ -1,0 +1,44 @@
+{% extends "baze.html" %}
+{% block emri_i_faqes %}
+<style>
+.produkt{
+    color: black;
+    margin-top: 200px;
+    }
+    .bar{
+        background-color: #1f1f2e;
+        width: 100%
+    }
+</style>
+{% include "navbar.html" %}
+    {% endblock %}
+   {% block permbajtja %}
+{% csrf_token %}
+<div class="produkt">
+    <h6> {{ user }}, deshiron te blesh keto produkte ?</h6>
+
+    <table class="table">
+  <tbody>
+  {% for prod in produkte %}
+    <tr>
+      <td>{{ prod }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+     <button type="button" class="btn btn-secondary btn-lg btn-block"> Bli </button>
+    <hr>
+    <p><a href="{% url 'index' %}" class="btn btn-primary btn-lg btn-block">Kthehu ne faqen kryesore.</a></p>
+ <hr>
+    <p><a href="{% url 'logout' %}" class="btn btn-secondary btn-lg btn-block">Dil</a></p>
+    </div>
+    {% endblock %}S
+  {% block footer %}
+{% include "footer.html" %}
+  {% endblock %}
+
+
+
+
+
+

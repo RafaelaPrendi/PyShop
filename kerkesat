@@ -28,7 +28,8 @@ per te dhene funksionalitetin e kerkuar
 Faqet/URL-te:
 /produkt/<id> -> GET
 *pershkrim i produktit (tip/emer)
-*liste me DYQANe ku mund ta "ble" kete produkt (si dhe cmimi i ketij produkti ne cdo dyqan)
+*liste me DYQANE
+ ku mund ta "ble" kete produkt (si dhe cmimi i ketij produkti ne cdo dyqan)
 
  /dyqan/<id> -> GET
 *pershkrim i dyqanit (emer/adrese)

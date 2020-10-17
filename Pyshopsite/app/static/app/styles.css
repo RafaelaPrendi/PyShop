@@ -128,11 +128,13 @@ img {
 text-align: center;
 color: #1f1f2e;
 }
-.copyright{
 
-}
 #github{
 color: #1f1f2e;
+}
+.produkt{
+color: black;
+background-color: white;
 }
 /*
  * Affix and center

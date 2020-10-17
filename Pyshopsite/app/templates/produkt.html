@@ -1,0 +1,23 @@
+{% extends "baze.html" %}
+{% block emri_i_faqes %}
+<style>
+.produkt{
+    color: black;
+    }
+    .bar{
+        background-color: #1f1f2e;
+        width: 100%
+    }
+</style>
+{% include "navbar.html" %}
+<div class="container-fluid mt-5 produkt">
+
+     <h2>{{ titulli_i_faqes }}</h2>
+    {% endblock %}
+    {% block permbajtja %}
+        {% include "komponente/prod.html" %}
+    {% endblock %}
+</div>
+  {% block footer %}
+{% include "footer.html" %}
+  {% endblock %}

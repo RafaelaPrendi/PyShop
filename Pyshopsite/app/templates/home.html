@@ -11,29 +11,28 @@
 <div class="site-wrapper">
     <div class="site-wrapper-inner">
         <div class="container">
-
-            <div class="masthead clearfix">
-                <div class="container inner row">
-                    <h3 class="masthead-brand col">PyShop</h3>
-                    <div class="col-6">
-                        <nav class="navbar navbar-expand-lg">
-                            <ul class="navbar-nav masthead-nav">
-                                <li class="active nav-item"><a href="#">Home</a></li>
-                                <li><a class="nav-item " href="#">Login</a></li>
-                                <li><a class="nav-item" href="#">Register</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
+           {% include "navbar.html" %}
             <div class="inner cover">
                 <h1 class="cover-heading">Shumëllojshmëri produktesh në shtëpinë tuaj </h1>
                 <p class="lead">PyShop është një sistem online i katalogimit të produkteve. PyShop ju ofron mundësinë që
                     të kërkoni produktin dhe dyqanet ku ndodhet ose të shikoni inventarin e një dyqani. Rregjistrohuni
                     për mundësinë e blerjes online.</p>
                 <p class="lead">
-                    <a class="btn btn-lg btn-default mainbtn" href="#">Kërko produkt</a>
-                    <a class="btn btn-lg btn-default mainbtn" href="#">Kërko dyqan</a>
+<!--                    Form per te kerkuar emrin e dyqanit-->
+                    <form action="KerkoDyqan/" method="post">
+                <div class="form-group">
+                        {% csrf_token %}
+                        <label for="emri_dyqanit"> Kërko Dyqanin : </label>
+                    <input  id="emri_dyqanit" type="text" name="emri_dyqanit" value="">
+                    <input type="submit" value="Search"></div>
+                    </form>
+                <form action="KerkoProdukt/" method="post">
+                        {% csrf_token %}
+                    <div class="form-group">
+                        <label for="emri_produktit"> Kërko Produktin : </label>
+                        <input  id="emri_produktit" type="text" name="emri_produktit" value="">
+                        <input type="submit" value="Search"></div>
+                    </form>
                 </p>
             </div>
         </div>
@@ -46,11 +45,8 @@
     </div>
     <hr>
 </div>
-<div class="container foot">
-    <footer>
-        <p>Copyright @ Rafaela Prendi</p>
-        <a href="https://github.com/RafaelaPrendi" id="github"> GitHub Profile </a>
-    </footer>
-</div>
+  {% block footer %}
+{% include "footer.html" %}
+  {% endblock %}
 </body>
 </html>

@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col">
+<div class="card text-center">
+  <h5 class="card-header">{{dyqan.emri}}</h5>
+  <div class="card-body">
+    <ul class="list-group list-group-flush"><li class="list-group-item"><img src=" {{ dyqan.logo }}" alt="Logo"></li>
+    <li class="list-group-item"> Adresa: {{ dyqan.adresa }}</li>
+    <li class="list-group-item"> Kontakt: {{ dyqan.email }} ALL</li>
+  </ul>
+    <div class="card-footer">
+        <ul class="list-group list-group-flush">
+            <form  action="{% url 'shto_ne_shporte' %}" method="post">
+           {% csrf_token %}
+        {% for prod in produktet %}
+            <li class="list-group-item">{{prod.emri}} : {{ prod.cmimi }} ALL
+                <span>   <input class="form-check-input" type="checkbox" value="{{ prod.emri }}" name="produkt"></span>
+            </li>
+        {% endfor %}
+        </ul>
+        <input type="submit" value="Shto ne shporte">
+         </form>
+  </div>
+  </div>
+     <a href="{% url 'index' %}" class="btn btn-secondary btn-sm">Kthehu</a>
+</div>
+</div></div>
