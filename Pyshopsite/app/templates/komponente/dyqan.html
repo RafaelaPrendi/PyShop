@@ -1,3 +1,8 @@
+<style>
+    .lst{
+        margin-left: 30px;
+    }
+</style>
 <div class="row">
   <div class="col">
 <div class="card text-center">
@@ -13,7 +18,7 @@
            {% csrf_token %}
         {% for prod in produktet %}
             <li class="list-group-item">{{prod.emri}} : {{ prod.cmimi }} ALL
-                <span>   <input class="form-check-input" type="checkbox" value="{{ prod.emri }}" name="produkt"></span>
+                <span class="lst"><input class="form-check-input" type="checkbox" value="{{ prod.emri }}" name="produkt"></span>
             </li>
         {% endfor %}
         </ul>

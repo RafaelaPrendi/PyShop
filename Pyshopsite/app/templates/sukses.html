@@ -1,0 +1,31 @@
+{% extends "baze.html" %}
+{% block emri_i_faqes %}
+<style>
+.produkt{
+    color: black;
+    }
+    .bar{
+        background-color: #1f1f2e;
+        width: 100%
+    }
+    .jumbotron{
+    margin-top: 100px;
+    }
+</style>
+{% include "navbar.html" %}
+<div class="container-fluid mt-5 produkt">
+
+    {% endblock %}
+    {% block permbajtja %}
+       <div class="jumbotron">
+  <h1 class="display-4">Blerja u krye me sukses!</h1>
+  <p class="lead">Faleminderit që zgjodhet shërbimin tonë!.</p>
+  <hr class="my-4">
+  <p><a href="{% url 'index' %}" class="btn btn-primary btn-lg">Kthehu</a></p>
+           <p><a href="{% url 'logout' %}" class="btn btn-secondary btn-lg btn-block">Dil</a></p>
+</div>
+    {% endblock %}
+</div>
+  {% block footer %}
+{% include "footer.html" %}
+  {% endblock %}

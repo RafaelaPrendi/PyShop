@@ -12,6 +12,7 @@ urlpatterns = [
     path('accounts/logged_out/', views.logout_request, name="logout_request"),
     path(r'home/KerkoDyqan/', views.kerko_dyqan, name='kerko_dyqan'),
     path(r'home/KerkoProdukt/', views.kerko_produkt, name='kerko_produkt'),
-    path(r'home/bli/', views.shto_ne_shporte, name='shto_ne_shporte'),
+    path(r'dyqan/bli/', views.shto_ne_shporte, name='shto_ne_shporte'),
+    path(r'dyqan/sukses/', views.blerje, name='blerje'),
 
 ]

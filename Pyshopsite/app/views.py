@@ -154,3 +154,7 @@ def shto_ne_shporte(request):
 def logout_request(request):
     auth.logout(request)
     return render(request, 'registration/logged_out.html')
+
+@login_required(login_url='/accounts/login/')
+def blerje(request):
+    return render(request, 'sukses.html')
